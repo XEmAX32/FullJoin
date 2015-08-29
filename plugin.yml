@@ -1,0 +1,12 @@
+name: FullJoin
+main: src/FullJoin/Main
+version: 1.0.0
+api: [1.12.0]
+load: STARTUP
+author: AryToNeX
+description: Allow players to join full servers by permission
+website: https://github.com/AryToNeX
+permissions:
+  fulljoin.join:
+    default: op
+    description: "Allow players to join full servers"
