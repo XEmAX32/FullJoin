@@ -14,6 +14,7 @@
 namespace FullJoin;
 
 use pocketmine\plugin\PluginBase;
+use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\Listener;
 use pocketmine\utils\TextFormat;
 use pocketmine\event\player\PlayerKickEvent;
@@ -36,4 +37,9 @@ class Main extends PluginBase implements Listener{
 		  }
 	
 	}
+  public function onJoin(PlayerJoinEvent $e){
+$player = $e->getPlayer();
+if($player->hasPermission("fulljoin.join"){
+$player->sendMessage(TextFormat::BLUE . "You succesfully join the server");
+   }
 }
